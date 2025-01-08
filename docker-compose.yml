@@ -1,0 +1,11 @@
+services:
+  frontend:
+    image: frontend-image
+    build: .
+    restart: always
+    tty: true
+    volumes:
+      - ./host-frontend-root:/opt/frontend-container-app-root/
+    environment:
+      - HOST=localhost
+    network_mode: host
