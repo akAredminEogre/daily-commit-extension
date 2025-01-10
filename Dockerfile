@@ -6,6 +6,6 @@ WORKDIR /opt/frontend-container-app-root/frontend-src-root
 RUN apk add --no-cache \
   chromium
 
-# COPY ./host-frontend-root/frontend-src-root /opt/frontend-container-app-root/frontend-src-root
+COPY ./host-frontend-root/frontend-src-root /opt/frontend-container-app-root/frontend-src-root
 
-# RUN npm install
+RUN npm install
